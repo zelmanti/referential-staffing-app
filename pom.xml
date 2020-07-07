@@ -651,7 +651,7 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver></driver>
-                        <url>jdbc:sqlserver:/localhost:1433;instance=SQLEXPRESS;databaseName=WorkForceManagement;catalog=Infrastructure;Integrated Security=true</url>
+                        <url>jdbc:sqlserver:/localhost:1433;instance=SQLEXPRESS;databaseName=workforceManagentInterface;catalog=Infrastructure;Integrated Security=true</url>
                         <defaultSchemaName></defaultSchemaName>
                         <username>SA</username>
                         <password>P@ssw0rd10</password>
