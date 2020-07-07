@@ -1,0 +1,28 @@
+{
+  "referentialStaffingApp": {
+    "forfait": {
+      "home": {
+        "title": "Forfaits",
+        "createLabel": "Create a new Forfait",
+        "createOrEditLabel": "Create or edit a Forfait",
+        "notFound": "No Forfaits found"
+      },
+      "created": "A new Forfait is created with identifier {{ param }}",
+      "updated": "A Forfait is updated with identifier {{ param }}",
+      "deleted": "A Forfait is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Forfait {{ id }}?"
+      },
+      "detail": {
+        "title": "Forfait"
+      },
+      "projet": "Projet",
+      "responsable": "Responsable",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "ressource": "Ressource",
+      "status": "Status",
+      "lieu": "Lieu"
+    }
+  }
+}

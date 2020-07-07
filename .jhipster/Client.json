@@ -1,0 +1,37 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "nameClient",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "namClientIris",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeClientIris",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marche",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200707001111",
+  "entityTableName": "client",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

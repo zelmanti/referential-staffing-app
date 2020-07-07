@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-affectation-heading" jhiTranslate="referentialStaffingApp.affectation.home.createOrEditLabel">Create or edit a Affectation</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.ressource" for="field_ressource">Ressource</label>
+                    <input type="text" class="form-control" name="ressource" id="field_ressource"
+                           formControlName="ressource"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.rattachementRessource" for="field_rattachementRessource">Rattachement Ressource</label>
+                    <input type="text" class="form-control" name="rattachementRessource" id="field_rattachementRessource"
+                           formControlName="rattachementRessource"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.prestation" for="field_prestation">Prestation</label>
+                    <input type="text" class="form-control" name="prestation" id="field_prestation"
+                           formControlName="prestation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.codeProjet" for="field_codeProjet">Code Projet</label>
+                    <input type="text" class="form-control" name="codeProjet" id="field_codeProjet"
+                           formControlName="codeProjet"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.status" for="field_status">Status</label>
+                    <input type="text" class="form-control" name="status" id="field_status"
+                           formControlName="status"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.client" for="field_client">Client</label>
+                    <input type="text" class="form-control" name="client" id="field_client"
+                           formControlName="client"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.rattachementClient" for="field_rattachementClient">Rattachement Client</label>
+                    <input type="text" class="form-control" name="rattachementClient" id="field_rattachementClient"
+                           formControlName="rattachementClient"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.startDate" for="field_startDate">Start Date</label>
+                    <div class="input-group">
+                        <input id="field_startDate" type="text" class="form-control" name="startDate" ngbDatepicker #startDateDp="ngbDatepicker" formControlName="startDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="startDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.affectation.endDate" for="field_endDate">End Date</label>
+                    <div class="input-group">
+                        <input id="field_endDate" type="text" class="form-control" name="endDate" ngbDatepicker #endDateDp="ngbDatepicker" formControlName="endDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="endDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

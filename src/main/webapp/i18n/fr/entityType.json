@@ -1,0 +1,24 @@
+{
+  "referentialStaffingApp": {
+    "entityType": {
+      "home": {
+        "title": "EntityTypes",
+        "createLabel": "Créer un nouveau Entity Type",
+        "createOrEditLabel": "Créer ou éditer un Entity Type",
+        "notFound": "Aucun Entity Type trouvé"
+      },
+      "created": "Un nouveau Entity Type a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Entity Type avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Entity Type avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Entity Type {{ id }} ?"
+      },
+      "detail": {
+        "title": "Entity Type"
+      },
+      "codeTypeEntitee": "Code Type Entitee",
+      "libelleTypeEntitee": "Libelle Type Entitee",
+      "isActive": "Is Active"
+    }
+  }
+}

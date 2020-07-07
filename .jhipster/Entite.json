@@ -1,0 +1,33 @@
+{
+  "name": "Entite",
+  "fields": [
+    {
+      "fieldName": "codeEntity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libeleEntity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typeEntitee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "manager",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200706221858",
+  "entityTableName": "entite",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

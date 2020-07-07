@@ -1,0 +1,26 @@
+{
+  "referentialStaffingApp": {
+    "lMission": {
+      "home": {
+        "title": "LMissions",
+        "createLabel": "Créer un nouveau L Mission",
+        "createOrEditLabel": "Créer ou éditer un L Mission",
+        "notFound": "Aucun L Mission trouvé"
+      },
+      "created": "Un nouveau L Mission a été créé avec l'identifiant {{ param }}",
+      "updated": "Le L Mission avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le L Mission avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le L Mission {{ id }} ?"
+      },
+      "detail": {
+        "title": "L Mission"
+      },
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "descriptionMission": "Description Mission",
+      "indicateurRenouvelement": "Indicateur Renouvelement",
+      "isActive": "Is Active"
+    }
+  }
+}

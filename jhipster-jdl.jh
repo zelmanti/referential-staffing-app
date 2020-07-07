@@ -1,0 +1,85 @@
+
+entity Affectation{
+id  Long 
+ressource String
+rattachementRessource String 
+prestation String 
+codeProjet String 
+status String 
+client String 
+rattachementClient String 
+startDate LocalDate
+endDate LocalDate 
+}
+
+entity Forfait{
+id Long 
+projet String 
+responsable String 
+startDate  LocalDate     
+endDate LocalDate 
+ressource String 
+Status String 
+Lieu String 
+}
+
+entity LMission{
+id Long 
+startDate  LocalDate  
+endDate LocalDate 
+descriptionMission String 
+indicateurRenouvelement String 
+isActive String 
+}
+
+entity DFinanciere{
+id Long
+startDate String  
+endDate String   
+tjm Double  
+rfa  Double  
+fraisMentuels Double
+fraisJournaliers Double 
+margeCalculee Double  
+indicateurTRevenue  String 
+joursTravailee LocalDate 
+moisTravailee LocalDate 
+anneesTravailee LocalDate 
+scr String  
+chiffreAffaireCalculee Double    
+coutsCalculee Double  
+}
+entity Entite {
+id Long 
+codeEntity String 
+libeleEntity String 
+typeEntitee  String 
+manager String     
+ 
+
+}
+
+entity SCRate {
+id Long  
+code String 
+niveau String 
+localisation String     
+montant String 
+
+}
+entity EntityType {
+id Long
+codeTypeEntitee String 
+libelleTypeEntitee String 
+IsActive Boolean   
+}
+
+entity Client {
+id Long 
+nameClient String 
+namClientIris String    
+codeClientIris String 
+marche String 
+isActive Boolean 
+}
+

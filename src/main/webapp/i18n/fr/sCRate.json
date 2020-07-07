@@ -1,0 +1,25 @@
+{
+  "referentialStaffingApp": {
+    "sCRate": {
+      "home": {
+        "title": "SCRates",
+        "createLabel": "Créer un nouveau SC Rate",
+        "createOrEditLabel": "Créer ou éditer un SC Rate",
+        "notFound": "Aucun SC Rate trouvé"
+      },
+      "created": "Un nouveau SC Rate a été créé avec l'identifiant {{ param }}",
+      "updated": "Le SC Rate avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le SC Rate avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le SC Rate {{ id }} ?"
+      },
+      "detail": {
+        "title": "SC Rate"
+      },
+      "code": "Code",
+      "niveau": "Niveau",
+      "localisation": "Localisation",
+      "montant": "Montant"
+    }
+  }
+}

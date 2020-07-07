@@ -1,0 +1,87 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="referentialStaffingApp.dFinanciere.home.title">D Financieres</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-d-financiere" [routerLink]="['/d-financiere/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="referentialStaffingApp.dFinanciere.home.createLabel">
+            Create a new D Financiere
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="dFinancieres?.length === 0">
+        <span jhiTranslate="referentialStaffingApp.dFinanciere.home.notFound">No dFinancieres found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="dFinancieres && dFinancieres.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.startDate">Start Date</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.endDate">End Date</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.tjm">Tjm</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.rfa">Rfa</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.fraisMentuels">Frais Mentuels</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.fraisJournaliers">Frais Journaliers</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.margeCalculee">Marge Calculee</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.indicateurTRevenue">Indicateur T Revenue</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.joursTravailee">Jours Travailee</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.moisTravailee">Mois Travailee</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.anneesTravailee">Annees Travailee</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.scr">Scr</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.chiffreAffaireCalculee">Chiffre Affaire Calculee</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.dFinanciere.coutsCalculee">Couts Calculee</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dFinanciere of dFinancieres ;trackBy: trackId">
+                    <td><a [routerLink]="['/d-financiere', dFinanciere.id, 'view']">{{ dFinanciere.id }}</a></td>
+                    <td>{{ dFinanciere.startDate }}</td>
+                    <td>{{ dFinanciere.endDate }}</td>
+                    <td>{{ dFinanciere.tjm }}</td>
+                    <td>{{ dFinanciere.rfa }}</td>
+                    <td>{{ dFinanciere.fraisMentuels }}</td>
+                    <td>{{ dFinanciere.fraisJournaliers }}</td>
+                    <td>{{ dFinanciere.margeCalculee }}</td>
+                    <td>{{ dFinanciere.indicateurTRevenue }}</td>
+                    <td>{{ dFinanciere.joursTravailee | date:'mediumDate' }}</td>
+                    <td>{{ dFinanciere.moisTravailee | date:'mediumDate' }}</td>
+                    <td>{{ dFinanciere.anneesTravailee | date:'mediumDate' }}</td>
+                    <td>{{ dFinanciere.scr }}</td>
+                    <td>{{ dFinanciere.chiffreAffaireCalculee }}</td>
+                    <td>{{ dFinanciere.coutsCalculee }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/d-financiere', dFinanciere.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/d-financiere', dFinanciere.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(dFinanciere)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

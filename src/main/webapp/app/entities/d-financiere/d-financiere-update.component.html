@@ -1,0 +1,122 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-d-financiere-heading" jhiTranslate="referentialStaffingApp.dFinanciere.home.createOrEditLabel">Create or edit a D Financiere</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.startDate" for="field_startDate">Start Date</label>
+                    <input type="text" class="form-control" name="startDate" id="field_startDate"
+                           formControlName="startDate"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.endDate" for="field_endDate">End Date</label>
+                    <input type="text" class="form-control" name="endDate" id="field_endDate"
+                           formControlName="endDate"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.tjm" for="field_tjm">Tjm</label>
+                    <input type="number" class="form-control" name="tjm" id="field_tjm"
+                           formControlName="tjm"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.rfa" for="field_rfa">Rfa</label>
+                    <input type="number" class="form-control" name="rfa" id="field_rfa"
+                           formControlName="rfa"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.fraisMentuels" for="field_fraisMentuels">Frais Mentuels</label>
+                    <input type="number" class="form-control" name="fraisMentuels" id="field_fraisMentuels"
+                           formControlName="fraisMentuels"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.fraisJournaliers" for="field_fraisJournaliers">Frais Journaliers</label>
+                    <input type="number" class="form-control" name="fraisJournaliers" id="field_fraisJournaliers"
+                           formControlName="fraisJournaliers"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.margeCalculee" for="field_margeCalculee">Marge Calculee</label>
+                    <input type="number" class="form-control" name="margeCalculee" id="field_margeCalculee"
+                           formControlName="margeCalculee"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.indicateurTRevenue" for="field_indicateurTRevenue">Indicateur T Revenue</label>
+                    <input type="text" class="form-control" name="indicateurTRevenue" id="field_indicateurTRevenue"
+                           formControlName="indicateurTRevenue"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.joursTravailee" for="field_joursTravailee">Jours Travailee</label>
+                    <div class="input-group">
+                        <input id="field_joursTravailee" type="text" class="form-control" name="joursTravailee" ngbDatepicker #joursTravaileeDp="ngbDatepicker" formControlName="joursTravailee"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="joursTravaileeDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.moisTravailee" for="field_moisTravailee">Mois Travailee</label>
+                    <div class="input-group">
+                        <input id="field_moisTravailee" type="text" class="form-control" name="moisTravailee" ngbDatepicker #moisTravaileeDp="ngbDatepicker" formControlName="moisTravailee"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="moisTravaileeDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.anneesTravailee" for="field_anneesTravailee">Annees Travailee</label>
+                    <div class="input-group">
+                        <input id="field_anneesTravailee" type="text" class="form-control" name="anneesTravailee" ngbDatepicker #anneesTravaileeDp="ngbDatepicker" formControlName="anneesTravailee"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="anneesTravaileeDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.scr" for="field_scr">Scr</label>
+                    <input type="text" class="form-control" name="scr" id="field_scr"
+                           formControlName="scr"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.chiffreAffaireCalculee" for="field_chiffreAffaireCalculee">Chiffre Affaire Calculee</label>
+                    <input type="number" class="form-control" name="chiffreAffaireCalculee" id="field_chiffreAffaireCalculee"
+                           formControlName="chiffreAffaireCalculee"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="referentialStaffingApp.dFinanciere.coutsCalculee" for="field_coutsCalculee">Couts Calculee</label>
+                    <input type="number" class="form-control" name="coutsCalculee" id="field_coutsCalculee"
+                           formControlName="coutsCalculee"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
