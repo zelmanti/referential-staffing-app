@@ -45,7 +45,7 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:sqlserver://localhost:1433;instance=SQLEXPRESS;databaseName=workforceManagentInterface;catalog=Infrastructure;Integrated Security=true
+    url: jdbc:sqlserver://localhost:1433;instance=SQLEXPRESS;databaseName=WorkForceManagement;catalog=Infrastructure;Integrated Security=true
     username: SA
     password: P@ssw0rd10
     hikari:
