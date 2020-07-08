@@ -1,0 +1,53 @@
+{
+  "name": "Affectation",
+  "fields": [
+    {
+      "fieldName": "ressource",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rattachementRessource",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prestation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeProjet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "client",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rattachementClient",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200706221458",
+  "entityTableName": "affectation",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

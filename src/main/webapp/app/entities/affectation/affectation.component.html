@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="referentialStaffingApp.affectation.home.title">Affectations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-affectation" [routerLink]="['/affectation/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="referentialStaffingApp.affectation.home.createLabel">
+            Create a new Affectation
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="affectations?.length === 0">
+        <span jhiTranslate="referentialStaffingApp.affectation.home.notFound">No affectations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="affectations && affectations.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.ressource">Ressource</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.rattachementRessource">Rattachement Ressource</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.prestation">Prestation</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.codeProjet">Code Projet</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.status">Status</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.client">Client</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.rattachementClient">Rattachement Client</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.startDate">Start Date</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.affectation.endDate">End Date</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let affectation of affectations ;trackBy: trackId">
+                    <td><a [routerLink]="['/affectation', affectation.id, 'view']">{{ affectation.id }}</a></td>
+                    <td>{{ affectation.ressource }}</td>
+                    <td>{{ affectation.rattachementRessource }}</td>
+                    <td>{{ affectation.prestation }}</td>
+                    <td>{{ affectation.codeProjet }}</td>
+                    <td>{{ affectation.status }}</td>
+                    <td>{{ affectation.client }}</td>
+                    <td>{{ affectation.rattachementClient }}</td>
+                    <td>{{ affectation.startDate | date:'mediumDate' }}</td>
+                    <td>{{ affectation.endDate | date:'mediumDate' }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/affectation', affectation.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/affectation', affectation.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(affectation)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

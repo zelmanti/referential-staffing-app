@@ -1,0 +1,29 @@
+{
+  "name": "EntityType",
+  "fields": [
+    {
+      "fieldName": "codeTypeEntitee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelleTypeEntitee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200706222058",
+  "entityTableName": "entity_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

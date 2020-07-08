@@ -1,0 +1,35 @@
+{
+  "referentialStaffingApp": {
+    "dFinanciere": {
+      "home": {
+        "title": "DFinancieres",
+        "createLabel": "Créer un nouveau D Financiere",
+        "createOrEditLabel": "Créer ou éditer un D Financiere",
+        "notFound": "Aucun D Financiere trouvé"
+      },
+      "created": "Un nouveau D Financiere a été créé avec l'identifiant {{ param }}",
+      "updated": "Le D Financiere avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le D Financiere avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le D Financiere {{ id }} ?"
+      },
+      "detail": {
+        "title": "D Financiere"
+      },
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "tjm": "Tjm",
+      "rfa": "Rfa",
+      "fraisMentuels": "Frais Mentuels",
+      "fraisJournaliers": "Frais Journaliers",
+      "margeCalculee": "Marge Calculee",
+      "indicateurTRevenue": "Indicateur T Revenue",
+      "joursTravailee": "Jours Travailee",
+      "moisTravailee": "Mois Travailee",
+      "anneesTravailee": "Annees Travailee",
+      "scr": "Scr",
+      "chiffreAffaireCalculee": "Chiffre Affaire Calculee",
+      "coutsCalculee": "Couts Calculee"
+    }
+  }
+}

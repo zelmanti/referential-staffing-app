@@ -1,0 +1,28 @@
+{
+  "referentialStaffingApp": {
+    "forfait": {
+      "home": {
+        "title": "Forfaits",
+        "createLabel": "Créer un nouveau Forfait",
+        "createOrEditLabel": "Créer ou éditer un Forfait",
+        "notFound": "Aucun Forfait trouvé"
+      },
+      "created": "Un nouveau Forfait a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Forfait avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Forfait avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Forfait {{ id }} ?"
+      },
+      "detail": {
+        "title": "Forfait"
+      },
+      "projet": "Projet",
+      "responsable": "Responsable",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "ressource": "Ressource",
+      "status": "Status",
+      "lieu": "Lieu"
+    }
+  }
+}

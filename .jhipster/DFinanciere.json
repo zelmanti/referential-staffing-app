@@ -1,0 +1,73 @@
+{
+  "name": "DFinanciere",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tjm",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "rfa",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "fraisMentuels",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "fraisJournaliers",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "margeCalculee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "indicateurTRevenue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "joursTravailee",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "moisTravailee",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "anneesTravailee",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "scr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "chiffreAffaireCalculee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "coutsCalculee",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200706221758",
+  "entityTableName": "d_financiere",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

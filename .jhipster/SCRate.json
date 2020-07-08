@@ -1,0 +1,33 @@
+{
+  "name": "SCRate",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "niveau",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "localisation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200706221958",
+  "entityTableName": "sc_rate",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

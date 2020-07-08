@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="dFinanciere">
+            <h2><span jhiTranslate="referentialStaffingApp.dFinanciere.detail.title">D Financiere</span> {{ dFinanciere.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.startDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.endDate">End Date</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.endDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.tjm">Tjm</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.tjm }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.rfa">Rfa</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.rfa }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.fraisMentuels">Frais Mentuels</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.fraisMentuels }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.fraisJournaliers">Frais Journaliers</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.fraisJournaliers }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.margeCalculee">Marge Calculee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.margeCalculee }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.indicateurTRevenue">Indicateur T Revenue</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.indicateurTRevenue }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.joursTravailee">Jours Travailee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.joursTravailee }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.moisTravailee">Mois Travailee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.moisTravailee }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.anneesTravailee">Annees Travailee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.anneesTravailee }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.scr">Scr</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.scr }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.chiffreAffaireCalculee">Chiffre Affaire Calculee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.chiffreAffaireCalculee }}</span>
+                </dd>
+                <dt><span jhiTranslate="referentialStaffingApp.dFinanciere.coutsCalculee">Couts Calculee</span></dt>
+                <dd>
+                    <span>{{ dFinanciere.coutsCalculee }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/d-financiere', dFinanciere.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

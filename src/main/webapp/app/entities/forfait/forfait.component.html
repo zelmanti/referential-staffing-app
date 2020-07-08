@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="referentialStaffingApp.forfait.home.title">Forfaits</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-forfait" [routerLink]="['/forfait/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="referentialStaffingApp.forfait.home.createLabel">
+            Create a new Forfait
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="forfaits?.length === 0">
+        <span jhiTranslate="referentialStaffingApp.forfait.home.notFound">No forfaits found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="forfaits && forfaits.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.projet">Projet</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.responsable">Responsable</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.startDate">Start Date</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.endDate">End Date</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.ressource">Ressource</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.status">Status</span></th>
+                    <th scope="col" ><span jhiTranslate="referentialStaffingApp.forfait.lieu">Lieu</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let forfait of forfaits ;trackBy: trackId">
+                    <td><a [routerLink]="['/forfait', forfait.id, 'view']">{{ forfait.id }}</a></td>
+                    <td>{{ forfait.projet }}</td>
+                    <td>{{ forfait.responsable }}</td>
+                    <td>{{ forfait.startDate | date:'mediumDate' }}</td>
+                    <td>{{ forfait.endDate | date:'mediumDate' }}</td>
+                    <td>{{ forfait.ressource }}</td>
+                    <td>{{ forfait.status }}</td>
+                    <td>{{ forfait.lieu }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/forfait', forfait.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/forfait', forfait.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(forfait)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
