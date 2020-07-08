@@ -8,16 +8,16 @@ codeProjet String
 status String 
 client String 
 rattachementClient String 
-startDate LocalDate
-endDate LocalDate 
+startDate String
+endDate String 
 }
 
 entity Forfait{
 id Long 
 projet String 
 responsable String 
-startDate  LocalDate     
-endDate LocalDate 
+startDate  String     
+endDate String 
 ressource String 
 Status String 
 Lieu String 
@@ -42,9 +42,9 @@ fraisMentuels Double
 fraisJournaliers Double 
 margeCalculee Double  
 indicateurTRevenue  String 
-joursTravailee LocalDate 
-moisTravailee LocalDate 
-anneesTravailee LocalDate 
+joursTravailee String 
+moisTravailee String 
+anneesTravailee String 
 scr String  
 chiffreAffaireCalculee Double    
 coutsCalculee Double  
@@ -82,4 +82,5 @@ codeClientIris String
 marche String 
 isActive Boolean 
 }
+
 
